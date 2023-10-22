@@ -1,0 +1,19 @@
+1) - Django has a built in ORM and the object is a object relational mapper 
+2) - It's a bascially a system whereby it abstarcts away the complexities of interacting with the SQL database and the ORM allows 
+us to basically write python code which in turn can interact with the SQL database all on its own.
+3) - What happens when we have those SQL code made by python or made by Django ?
+ANS: We need to do is that we need to instruct the Django framework that, hey, the migrationsthat have been made, you need to apply 
+these to database so that the database typically updates the schema and knows how to interact with our application.
+
+4) - A migration is basically the python code that we write to interact with our database.
+5) - Django Admin app or django admin clay tool is a tool that is provided to us by the django package that we install and we only use 
+     that to actually start or create our initial projectand after that I just switch to using the managae that profile because it contains all
+     of the functionalitythat I would require from the Django admin as well as some additional feature as well.
+6) - ASGI file is bascially the file that stands for Asynchronous Server gateway Interface and it allows external applications and that act as web servers 
+     to basically interactwith our Django application or service.
+7) - WSGI file is use when we actually deploy our application to production.
+8) - We're basically going to be doing is that we are basically going to be using the manage.py clay and we're going to be using that to be 
+     basically create a super user for our application.
+9) - A super user in the case just means a user which has admin privileages for our application which has a role of admin and the managed.py CLA 
+     tool basically has some functionality in that allows us to do that.
+     
