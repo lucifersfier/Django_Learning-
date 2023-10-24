@@ -16,4 +16,20 @@ these to database so that the database typically updates the schema and knows ho
      basically create a super user for our application.
 9) - A super user in the case just means a user which has admin privileages for our application which has a role of admin and the managed.py CLA 
      tool basically has some functionality in that allows us to do that.
-     
+
+***********************************************************************************************************
+
+1) - Introduction to Django apps
+
+          (a) - python manage.py --help
+          (b) - python manage.py startapp name
+
+          AutoMax >> settings.py 
+                              INSTALLED APPS 
+                                             'main',
+
+          (c) - Now, we have successfully linked our application with Django App.
+
+2) - Working with Django Apps  
+
+           (a) - 
