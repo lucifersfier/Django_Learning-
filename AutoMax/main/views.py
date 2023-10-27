@@ -3,5 +3,5 @@ from django.shortcuts import render
 
 
 def main_view(request):
-    return HttpResponse("<h1>Welcome to AutoMax!</h1>")
+    return render(request,"main/main.html",{"name":"AutoMax"})
 # Create your views here.

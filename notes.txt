@@ -41,3 +41,19 @@ these to database so that the database typically updates the schema and knows ho
                                                                          return HttpResponse("<h1>Welcome to AutoMax!</h1>")
            (b) - AutoMax > AutoMax > urls.py
            (c) - main > new file > urls.py
+
+3) - Django Templating
+
+           (a) - make templates folder in main folder
+           (b) - then create a main folder in template folder and then create main.html file in main folder
+           (c) - write html code there.
+           (d) - Now in views.py 
+                                GOING to pass the object after the path of the html file which will be key value 
+                                pair within it 
+           (e) - now going to pass this object into main.html file
+
+     This is one of the beautiful elements of the django Templating and that is that it allows us to dynamically 
+     inject data into our html and then render that
+
+4) - Expanding main.html template
+
