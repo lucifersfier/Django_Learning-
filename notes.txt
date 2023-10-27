@@ -57,3 +57,5 @@ these to database so that the database typically updates the schema and knows ho
 
 4) - Expanding main.html template
 
+           (a) - write some <html> header and <head> tags and write some html code like meta viewport and everything else.
+           (b) - now in body section write <h1> tag 
