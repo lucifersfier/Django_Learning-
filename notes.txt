@@ -32,4 +32,12 @@ these to database so that the database typically updates the schema and knows ho
 
 2) - Working with Django Apps  
 
-           (a) - 
+           (a) - main > views.py
+                        what we're going to be doing is that we are basically creating a view which is going to be responsible 
+                        for showing our let's just say main page when we navigate to our website.
+                        def landing_view(request): --->> requesting a parameter
+                                                         request a object that is going to be passed to the function.
+                        NOW returning as a response to this view ---->>>>
+                                                                         return HttpResponse("<h1>Welcome to AutoMax!</h1>")
+           (b) - AutoMax > AutoMax > urls.py
+           (c) - main > new file > urls.py
