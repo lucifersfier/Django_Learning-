@@ -59,3 +59,35 @@ these to database so that the database typically updates the schema and knows ho
 
            (a) - write some <html> header and <head> tags and write some html code like meta viewport and everything else.
            (b) - now in body section write <h1> tag 
+
+5) - Loading Static Assets Django
+
+           (a) - I'm going to be using to improve the stylish of our application is going to be bootstrap.
+                 it's a library, which gives us access to CSS as well as some JS files that basically enhance the
+                 stylish of our website.
+
+                 go to bootstrap.com --->>> download the bootstrp c files  
+                 after downloading open the directory where you are developing you website and copy the downloaded files 
+                 into the directory
+
+           (b) - go to the github repo and main>>user>>static folder copy and then paste it into 
+                 your directory main >> static 
+           (c) - open css folder and copy style.css file into your directory from the git hub directory of hussain
+           (d) - open bootswatch.com >> download whatever theme you like and put it into the static >> css directory
+           (e) - now we need to load these static files into our django application
+           (f) - use templating to our advantage to basically load the static file link for this 'href=""' header
+           (g) - i'll add these codes in href '{% static '' %}' 
+           (h) - static lead to the static folder which Django automatically lead to this folder
+           (i) - Now we need to add 'css/bootstrap.min.css' in href 
+           (j) - if you run the server you will see error
+           (k) - just go to main.html file add {% load static %} into the file above the code 
+                 because if you want to use static keyword you have to do this.
+           (l) - The reason i use static files is because i would like to package some code with our application such 
+                 as CSS files or javascript files that would like to make available on the client side.
+                 And these are static files that are a part of our application that we need to serve with our HTML pages.
+
+           (m) - To do that, i'm going to use the concept of working with static files
+                 with Django, where we for every app that requires acess to certain static files, we place the static files under the
+                 apps folder called staticand then we basically use the static tag wherever it's necessary within our actual HTML to load whatever static resources we need to load.
+                 
+                 
