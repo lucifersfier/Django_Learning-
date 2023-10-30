@@ -112,7 +112,38 @@ these to database so that the database typically updates the schema and knows ho
                   template from another template that we would use and you'll see how all of these things link.
             (g) - Now we're basically going to be extending a template(base.html) in main.html that exists
             (h) - Let's define a block in base.html and footer block for the footer section
+            (i) - add style.css file in base.html from static>css>style.css
 
+7) - FINISHING MAIN PAGE HTML ----->>>>>
+
+            (a) - I added this in main.html 
+
+                  <header class="mb-auto">
+            <div> 
+                <h3 class = "float-md-start mb-0">AutoMax</h3>
+                <nav class = "nav nav-masthead justify-content-center float-md-end">
+                    <a class = "nav-link active" aria-current="page" href="">Home</a>
+                    <a class = "nav-link" href="">Login</a> 
+                </nav>
+            </div>
+        </header>
+
+            (b) - Also update the main and footer tag 
+
+                        <main class="px-3">
+            <h2>Find a deal near you!</h2>
+            <p class="lead">Looking to buy or sell a used car? We've got you
+                covered. </br> AutoMax is the leading used car marketplace.</p>
+            <p class="lead">
+                <a href="" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Register</a>
+            </p>
+        </main> 
+        <footer class="mt-auto text-white-50">
+            <p>Copyright © {% now 'Y' %} <a href="" class="text-white">AutoMax</a> by <a href="https://preneure.com"
+                    class="text-white">lucifersfier.com</a></p>
+        </footer>
+
+            (c) - after that we are finished with the main page of our website.
 
                  
                  
