@@ -88,6 +88,31 @@ these to database so that the database typically updates the schema and knows ho
 
            (m) - To do that, i'm going to use the concept of working with static files
                  with Django, where we for every app that requires acess to certain static files, we place the static files under the
-                 apps folder called staticand then we basically use the static tag wherever it's necessary within our actual HTML to load whatever static resources we need to load.
+                 apps folder called staticand then we basically use the static tag wherever it's necessary within our actual HTML
+                 to load whatever static resources we need to load.
+
+6) - Extending Templates and Templates Blocks
+
+            (a) - Let's divide our templates into multiple different files and how I can basically load these files 
+                  templates together or join them together upon my wish.
+            (b) - I'm basically creating a base HTML template, which is going to serve as the basic template that all other
+                  templates are basically going to extend upon and this is going to allow me to do is that it's going to
+                  allow me the ability to bascially create these reusable pieces that  can be basically inserted into the because
+                  HTML and this will become just a bit more apparent as I basically code the actual state.
+            (c) - main >> template >> create new folder name it base folder and into this folder
+                  create a new file base.html and load basic html tag {% load static %}
+            (d) - copy all the head section of main.html to base.html file and remove it from the main.html and
+                  add <!DOCTYPE html> into the base.html
+            (e) - Define body tag and cut the footer tag from main.html and paste it into base.html
+            (f) - Let's define a section within base.html file where we are going to be dynamically loading content from 
+                  other templates and for that i'll use a concept known as blocks in templating for Django, and a block
+                  is basically a certain section in our template that we can define where we basically tell django that
+                  it is again going to be a template tag which is going to be blocked as denoted by this {% block %} ----
+                  {% endblock %} and whatever I put within this block is going to be basically going to be input it into this 
+                  template from another template that we would use and you'll see how all of these things link.
+            (g) - Now we're basically going to be extending a template(base.html) in main.html that exists
+            (h) - Let's define a block in base.html and footer block for the footer section
+
+
                  
                  
