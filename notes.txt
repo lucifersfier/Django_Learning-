@@ -145,5 +145,25 @@ these to database so that the database typically updates the schema and knows ho
 
             (c) - after that we are finished with the main page of our website.
 
+
+***********************************************************************************************************
+
+##########################  DJANGO AUTHENTICATION  ##########################
+
+Creating users in our application means register users and have the ability for users to log in and then manage the 
+data that's associated with users such as maybe their bio profile, picture address and things like that.
+
+
+1) - Create Users Django APP ---->>>>
+
+            (a) - we are now going to use startapp command
+                  our focus is going to be make sure that we create an app that is going to basically decouple the 
+                  authentication logic of our application into its own distinct app
+
+                  python  manage.py startapp users 
+            (b) - AutoMax >> AutoMax >> settings.py >> INSTALLED APPS after main add users string
+
+
+
                  
                  
