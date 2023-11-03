@@ -163,7 +163,20 @@ data that's associated with users such as maybe their bio profile, picture addre
                   python  manage.py startapp users 
             (b) - AutoMax >> AutoMax >> settings.py >> INSTALLED APPS after main add users string
 
+2) - Creating Profile Model ---->>>>
 
+            (a) - creating users in our web admin panel, and then basically how we can extend the functionaity.
+            (b) - creating a new model which is basically a profile model for the user it will act as an extension of 
+                  the user which basically save additional data regarding that user.
+            (c) - for that i am going into 
+                                          users >> models.py >> here we create profile model
+            (d) - now first creating a relationship between profile and the user.
+            (e) - Now we have created our profile and we need to migrate it.
+            (f) - and then apply migration to the database.
+            (g) - in terminal run python manage.py makemigrations
+            (h) - Now apply the migrations -->>
+                                                in terminal python manage.py migrate
+            (i) - 
 
                  
                  
