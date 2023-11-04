@@ -8,4 +8,5 @@ class Profile(models.Model):
     bio = models.CharField(max_length=140, blank=True)           # be equal to models.OneToOneField   
     phone_number= models.CharField(max_length=10,blank=True)        
      
-    
+    def __str__(self):
+        return f'{self.user.username}\'s Profile'

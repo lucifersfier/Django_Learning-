@@ -170,13 +170,17 @@ data that's associated with users such as maybe their bio profile, picture addre
                   the user which basically save additional data regarding that user.
             (c) - for that i am going into 
                                           users >> models.py >> here we create profile model
-            (d) - now first creating a relationship between profile and the user.
+            (d) - Now first creating a relationship between profile and the user.
             (e) - Now we have created our profile and we need to migrate it.
-            (f) - and then apply migration to the database.
-            (g) - in terminal run python manage.py makemigrations
+            (f) - And then apply migration to the database.
+            (g) - In terminal run python manage.py makemigrations
             (h) - Now apply the migrations -->>
                                                 in terminal python manage.py migrate
-            (i) - 
+
+3) - Django Admin Register Model ---->>>>
+
+            (a) - users >> admin.py >> 
+
 
                  
                  
