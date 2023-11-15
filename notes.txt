@@ -180,7 +180,23 @@ data that's associated with users such as maybe their bio profile, picture addre
 3) - Django Admin Register Model ---->>>>
 
             (a) - users >> admin.py >> 
+                                    from .models import Profile
 
+                  '''i am going to basically create a class which i am going to call profile admin '''
+                  #register function register the model for the admin panel so that the admin panel doesn't displays it.
+                                                            class ProfileAdmin(admin.ModelAdmin):
+                                                                  pass
 
+                                                            admin.site.register(Profile, ProfileAdmin)
+
+4) - Working with Django Signals ---->>>>
+
+            I would like to automate the process whereby when a user gets created in our application that it profile 
+            automatically gets created for them to achieve this functionality what we're going to be doing is that we're 
+            going to be using a concept in general known as signals 
+            Signals are basically a way for us to get notified if some certain action happens on our database, and 
+            depending upon that action we can perform other actions.
+
+            users -->> create signals.py file 
                  
                  
