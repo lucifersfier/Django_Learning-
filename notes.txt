@@ -198,5 +198,7 @@ data that's associated with users such as maybe their bio profile, picture addre
             depending upon that action we can perform other actions.
 
             users -->> create signals.py file 
+
+5) - 
                  
                  
