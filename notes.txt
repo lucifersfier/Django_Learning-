@@ -146,7 +146,7 @@ these to database so that the database typically updates the schema and knows ho
             (c) - after that we are finished with the main page of our website.
 
 
-***********************************************************************************************************
+*****************************
 
 ##########################  DJANGO AUTHENTICATION  ##########################
 
