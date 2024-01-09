@@ -200,6 +200,46 @@ data that's associated with users such as maybe their bio profile, picture addre
             users -->> create signals.py file
              
 
-5) - 
-                 
+5) - Adding Location Data to PROFILE ---->>>>
+
+            Go to the users folder > models.py 
+                  now i am going to create a new class here named CLASS LOCATION
+            and with this done, we are now coming to a point where we need to define the
+            state of a field as well as the zip code for this model
+            -->> for the state first use pip install django-localflavor
+                 then go to the AutoMax -> settings.py file
+                 in section -> INSTALLED APPS
+                 after the static files 'localflavor', and done 
+            Now we need to do some migrations 
+            for that clear state object 
+            now go to the terminal and write python manage.py makemigrations
+            after that python manage.py migrate 
+
+            After that go back to the models.py in users and then 
+            from localflavor.in_.models import INStateField
+            after that state = INStateField(default="DELHI")
+            Now next thing i am going to set the PAN CARD`
+            1) For setting up Pan Card Field -->>
+                  INPANCardNumberField in localflavor
+                  then pan_card = INPANCardNumberField(blank=True)
+            after that come to the terminal
+            and python manage.py makemigrations then python manage.py migrate
+            
+            Now I want to create a one to one field where a profile can just have one location
+            and location can be matched with one profile.
+            to do that come to the profile class below the location class
+            and have a location attached to a profile which is going to be equal to models dot one to one field.
+                location = models.OneToOneField(Location, on_delete=models.CASCADE, null=True)
+                with this done go back to terminal and repeat the migrations
+
+            Now register this model to the admin panel
+            go to admin.py -> class LocationAdmin(admin.ModelAdmin):
+                                    pass
+                              and 
+                              admin.site.register(Location, LocationAdmin)
+                              after that go back to the models.py
+                              def __str__(self):
+                                    return f'Location {self.id}'
+                              save and run the python manage.py runserver
+
                  
