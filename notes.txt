@@ -249,6 +249,52 @@ data that's associated with users such as maybe their bio profile, picture addre
             after that change in models.py 
             change on delete cascade in models.py to on_delete=models.Set_Null
             after that python manage.py makemigrations and python manage.py migrate
+
+7) - Working with Media Files Django ---->>>>
+
+            users -> models.py file 
+            go to the profile class change something in photo option like upload_to
+            now create a utils.py file in users folder and then there create a function user_directory_path
+            def user_directory_path(instance, filename):
+              return 'user_{0}/{1}'.format(instance.user.id, filename)
+            after that go back to the models.py file 
+            from .utils import user_directory_path
+            and then change 
+            photo = models.ImageField(upload_to=user_directory_path,null=True) 
+
+            then python manage.py makemigrations
+                 and python manage.py migrate
+
+            for globally placing the every media in our wanted folder 
             
+            AutoMax -> settings.py and go to the static url section 
+            # Media files (uploaded files)
+            MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+            for bascially accessible to the folder globally by every URL 
+            go to the AutoMax -> urls.py and define some functionality here for that 
+            add the below lines 
+            from django.conf.urls.static import static
+
+            then urlpatterns += static()
+
+            now go to the settings.py and in Static section -->>
+            MEDIA_URL = '/media/'
+
+            now then comeback to the urls.py file
+            from django.conf import settings and then to the point urlpatterns += static()
+            and change it into the urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+            this setting is only for development not for production.
+            if settings DEBUG:
+                  urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+            only then this setting will work.
+
+
+
+
+ 
+
 
                  
