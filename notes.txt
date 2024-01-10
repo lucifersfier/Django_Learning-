@@ -291,6 +291,53 @@ data that's associated with users such as maybe their bio profile, picture addre
 
             only then this setting will work.
 
+8) - Adding Login View ---->>>>
+
+            users -> views.py 
+            I'd like to create a function which is basically going to be responsible for rendering the login view
+            and handling the functionality regarding the login of the user.
+
+            create a URLs profile which is going to contain a link or a path which is going to basically
+            take us to our login view.
+
+            now let's go to our users folder and create a new file and I'm going to call this URLs.py
+            from django.urls import path
+            from .views import login_view
+            urlpatterns = [
+                  path('login/', login_view, name = 'login')
+            ]
+
+            AutoMax -> urls.py
+            add below lines 
+            from users import urls as users_app_urls
+            and in urlpatterns add 
+            path('', include(users_app_urls)),
+
+            now lets make a folder in our user folder named templates.
+            and the make a new folder under templates named users and under this folder make a file named
+            login.html
+            and in the login.html file write 
+            {% extends 'base/base.html' %}
+
+            {% block 'body' %}
+            <div class = "text-center">
+                  <main class = "form-signin">
+                        <h1> Login View :) </h1>
+                  </main>
+            </div>
+
+            {% endblock %}
+
+            {% block 'footer' %}
+            {% endblock %}
+
+
+
+
+
+
+
+
 
 
 
