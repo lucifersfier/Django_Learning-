@@ -19,7 +19,7 @@ class Profile(models.Model):
     photo = models.ImageField(null=True)                         #which i'm going to call user and this is going to
     bio = models.CharField(max_length=140, blank=True)           # be equal to models.OneToOneField   
     phone_number= models.CharField(max_length=10,blank=True)        
-    location = models.OneToOneField(Location, on_delete=models.CASCADE, null=True)
+    location = models.OneToOneField(Location, on_delete=models.SET_NULL, null=True)
     
     
      

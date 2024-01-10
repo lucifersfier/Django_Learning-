@@ -242,4 +242,13 @@ data that's associated with users such as maybe their bio profile, picture addre
                                     return f'Location {self.id}'
                               save and run the python manage.py runserver
 
+6) - Automate Location Model ---->>>>
+
+            utilizing the functionality of signals one again.
+            users -> signals.py and here we create a function create_profile_fucntion
+            after that change in models.py 
+            change on delete cascade in models.py to on_delete=models.Set_Null
+            after that python manage.py makemigrations and python manage.py migrate
+            
+
                  
