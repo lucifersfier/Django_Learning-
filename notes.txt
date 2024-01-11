@@ -331,8 +331,14 @@ data that's associated with users such as maybe their bio profile, picture addre
             {% block 'footer' %}
             {% endblock %}
 
+9) - Forms in Django ---->>>>
 
-
+            users -> views.py
+            we need to import some things that are required for forms so open your views.py file and
+            write from django.contrib.auth.forms import Authenticationform 
+            this form is a form class which basically allows us to accept the username and password login 
+            credentials for a user.
+            Now go to the login.html file and remove the h1 tag and add <form> element
 
 
 
